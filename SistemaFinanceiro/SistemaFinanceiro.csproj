@@ -203,6 +203,16 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Model.Entity\Model.Entity.csproj">
+      <Project>{221634b6-5397-4284-8498-4241abee4ee5}</Project>
+      <Name>Model.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model.Neg\Model.Neg.csproj">
+      <Project>{d5068bc8-f84f-439a-a60a-239a4c236c86}</Project>
+      <Name>Model.Neg</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

@@ -17,10 +17,25 @@ namespace Model.Dao
         //SABER O ESTADO DA CONEXAO (INICIAR A CONEXAO E ENCERRAR A CONEXAO)   
         public static ConexaoDB saberEstado()
         {
-            if(objConexaoDB == null)
+            if (objConexaoDB == null)
             {
+                //CHAMAR CONSTRUTOR PARA INICIAR A CONEXAO COM O BANCO DE DADOS
+                objConexaoDB = new ConexaoDB();
+            }
+            //RETORNAR COM O OBJETO DA CONEXAO, NESSE CASO É O objConexaoDB
+            return objConexaoDB;
+        }
 
-            }   
+        //PEGAR CONEXAO
+        public SqlConnection getCon()
+        {
+            return con;
+        }
+
+        //ENCERRAR CONEXAO COM O BANCO
+        public void CloseDB()
+        {
+            objConexaoDB = null;
         }
     }
 }
