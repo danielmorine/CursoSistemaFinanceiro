@@ -35,7 +35,7 @@ namespace Model.Entity
 
         [Display(Name = "CPF")]
         public string Cpf { get => cpf; set => cpf = value; }
-        public int Estado { get => Estado1; set => Estado1 = value; }
+        public int Estado { get => Estado; set => Estado = value; }
 
 
         //Instanciar Classe Cliente
