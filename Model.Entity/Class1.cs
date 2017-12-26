@@ -6,10 +6,7 @@ using System.Threading.Tasks;
 
 namespace Model.Entity
 {
-    class Program
+    public class Class1
     {
-        static void Main(string[] args)
-        {
-        }
     }
 }

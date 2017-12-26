@@ -1,4 +1,5 @@
-﻿using Model.Neg;
+﻿using Model.Entity;
+using Model.Neg;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,10 +21,12 @@ namespace SistemaFinanceiro.Controllers
         }
 
 
-        // GET: Cliente
+        // MOSTRAR Cliente
         public ActionResult Index()
-        {
-            return View();
+        { // CRIAR UMA LISTA 
+          //VAMOS LÁ DENTRO DO objClienteNeg e acesar o método FindAll
+            List<Cliente> lista = objClienteNeg.findAll();
+            return View(lista);
         }
 
         // GET: Cliente/Details/5
@@ -33,25 +36,26 @@ namespace SistemaFinanceiro.Controllers
         }
 
         // GET: Cliente/Create
+        [HttpGet]
         public ActionResult Create()
         {
+          //  mensagemInicioRegistrar();
             return View();
         }
 
         // POST: Cliente/Create
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        //Passar no parametro dados do Cliente que está na classe Cliente com nome
+        //objCliente
+        public ActionResult Create(Cliente objCliente)
         {
-            try
-            {
-                // TODO: Add insert logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
+           // mensagemInicioRegistrar();
+            objClienteNeg.create(objCliente);
+            //LIMPA
+            ModelState.Clear();
+            //RETORNA A VIEW DE CRIAÇÃO
+            return View("create");
+            
         }
 
         // GET: Cliente/Edit/5

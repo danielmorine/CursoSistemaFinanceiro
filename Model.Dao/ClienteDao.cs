@@ -153,7 +153,7 @@ namespace Model.Dao
         public List<Cliente> findAll()
         {
             List<Cliente> listaClientes = new List<Cliente>();
-            string findAll = "  select * from cliente order by name asc ";
+            string findAll = " select * from cliente order by nome asc ";
 
             try
             {
