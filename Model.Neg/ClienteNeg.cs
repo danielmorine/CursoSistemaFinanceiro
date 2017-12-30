@@ -121,7 +121,7 @@ namespace Model.Neg
             //begin verificar duplicidade cpf retorna estado=8
             Cliente objCliente1 = new Cliente();
             objCliente1.Cpf = objCliente.Cpf;
-            verificacao = !objClienteDao.findClientePorCpf(objCliente1);
+            verificacao = !objClienteDao.findClientePorcpf(objCliente1);
             if (!verificacao)
             {
                 objCliente.Estado = 9;

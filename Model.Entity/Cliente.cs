@@ -33,9 +33,9 @@ namespace Model.Entity
         [Display(Name = "Telefone")]
         public string Telefone { get => telefone; set => telefone = value; }
 
-        [Display(Name = "CPF")]
+        [Display(Name = "Cpf")]
         public string Cpf { get => cpf; set => cpf = value; }
-        public int Estado { get => Estado; set => Estado = value; }
+        public int Estado { get => estado; set => estado = value; }
 
 
         //Instanciar Classe Cliente
@@ -53,7 +53,7 @@ namespace Model.Entity
         {
             this.idCliente = idCliente;
             this.nome = nome;
-            this.cpf = Cpf;
+            this.cpf = cpf;
             this.endereco = endereco;
             this.telefone = telefone;
         }
