@@ -251,6 +251,11 @@
     <Content Include="Views\Inicio\Index.cshtml" />
     <Content Include="Views\Cliente\Index.cshtml" />
     <Content Include="Views\Cliente\Create.cshtml" />
+    <Content Include="Views\Cliente\BuscarClientes.cshtml" />
+    <Content Include="Views\Cliente\Delete.cshtml" />
+    <Content Include="Views\Cliente\Eliminar.cshtml" />
+    <Content Include="Views\Cliente\Find.cshtml" />
+    <Content Include="Views\Cliente\Update.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

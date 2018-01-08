@@ -24,7 +24,7 @@ namespace Model.Dao
                 objConexaoDB.getCon().Open();
                 comando.ExecuteNonQuery();
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 objCliente.Estado = 1;
 
@@ -49,7 +49,7 @@ namespace Model.Dao
                 objConexaoDB.getCon().Open();
                 comando.ExecuteNonQuery();
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 objCliente.Estado = 1;
 
@@ -163,7 +163,7 @@ namespace Model.Dao
 
         //OUTRAS IMPLEMENTAÇÕES
 
-        public bool findClientePorcpf(Cliente objCliente)
+        public bool findClientePorcpf1(Cliente objCliente)
         {
             bool temRegistros;
             string find = "select*from cliente where cpf='" + objCliente.Cpf + "'";

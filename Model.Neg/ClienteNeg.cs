@@ -121,7 +121,7 @@ namespace Model.Neg
             //begin verificar duplicidade cpf retorna estado=8
             Cliente objCliente1 = new Cliente();
             objCliente1.Cpf = objCliente.Cpf;
-            verificacao = !objClienteDao.findClientePorcpf(objCliente1);
+            verificacao = !objClienteDao.findClientePorcpf1(objCliente1);
             if (!verificacao)
             {
                 objCliente.Estado = 9;
@@ -172,6 +172,27 @@ namespace Model.Neg
             //end validar codigo
 
 
+            //inicio da validação do cpf
+            string cpf = objCliente.Cpf;
+            if (cpf == null)
+            {
+                objCliente.Estado = 50;
+                return;
+            }
+            else
+            {
+                cpf = objCliente.Cpf.Trim();
+                verificacao = cpf.Length <= 12 && cpf.Length > 10;
+                if (!verificacao)
+                {
+                    objCliente.Estado = 250;
+                    return;
+                }
+
+            }
+
+            //fim da validãção do cpf
+
             //begin validar nome retorna estado=2
             string nome = objCliente.Nome;
             if (nome == null)
@@ -194,27 +215,6 @@ namespace Model.Neg
 
 
 
-
-            //inicio da validação do cpf
-            string cpf = objCliente.Cpf;
-            if (cpf == null)
-            {
-                objCliente.Estado = 50;
-                return;
-            }
-            else
-            {
-                cpf = objCliente.Cpf.Trim();
-                verificacao = cpf.Length <= 12 && cpf.Length > 10;
-                if (!verificacao)
-                {
-                    objCliente.Estado = 250;
-                    return;
-                }
-
-            }
-
-            //fim da validãção do cpf
 
 
 
