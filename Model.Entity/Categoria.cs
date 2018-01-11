@@ -11,12 +11,12 @@ namespace Model.Entity
         private string idCategoria;
         private string nome;
         private string descricao;
-        private string estado;
+        private int estado;
 
         public string IdCategoria { get => idCategoria; set => idCategoria = value; }
         public string Nome { get => nome; set => nome = value; }
         public string Descricao { get => descricao; set => descricao = value; }
-        public string Estado { get => estado; set => estado = value; }
+        public int Estado { get => estado; set => estado = value; }
 
         public Categoria()
         {
