@@ -20,7 +20,10 @@ namespace Model.Entity
         public string Nome { get => nome; set => nome = value; }
         public string IdProduto { get => idProduto; set => idProduto = value; }
 
+        public Produto()
+        {
 
+        }
         public Produto(string idProduto)
         {
             this.idProduto = idProduto;
